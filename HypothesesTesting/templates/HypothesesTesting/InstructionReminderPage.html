@@ -1,0 +1,60 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block content %}
+<!-- ------------------------------- Header -------------------------------- -->
+<div class="outer-head-div">
+    <span class="inner-head-div-text new-title">
+        <!-- Title -->
+    </span>
+
+    <div class="inner-head-div-logo">
+        <img src="{% static 'Hypothesentesten/hd-logo-sw.png' %}" class="logo"/>
+    </div>
+</div>
+<hr style="margin-top:1px; margin-bottom:15px;">
+<!-- ------------------------------- Header -------------------------------- -->
+
+
+<h3>
+    Was Sie gleich tun werden:
+</h3>
+
+<p>
+    Sie werden die Möglichkeit haben, sich mit Hilfe der Suchergebnisse, welche
+    Ihnen angezeigt werden, über den gleich beschriebenen Sachverhalt
+    zu informieren. Klicken Sie auf ein Suchergebnis, um dieses auszuwählen und
+    die vollen Informationen lesen zu können. Bedenken Sie, Sie können sich in
+    jeder der sechs Runden nur für <b>eines</b> der Suchergebnisse entscheiden.
+    <br>
+    Bitte wählen Sie vor Ablauf der Zeit eines der Suchergebnisse durch Klicken und
+    eine Bestätigung mit "Weiter" aus. Wie bereits gesagt - die Ergebnisse
+    unterscheiden sich nicht in der Verlässlichkeit der Quellen und alle liefern
+    echte und wahre Informationen zum soeben beschriebenen Geschehen.
+</p>
+
+{% if player.singleplayer == 0 %}
+<p>
+    <b>Bitte denken Sie daran:</b>
+    <br>
+    Sie werden gleich mit anderen Studienteilnehmer*innen chatten. Um eine Entscheidung für eines der
+    Suchergebnisse
+    treffen zu können müssen Sie sich einigen - nutzen Sie die Gelegenheit und tauschen Sie sich dafür
+    aus! Bitte bleiben Sie dabei höflich und nett, Sie können nur gemeinsam als Gruppe eine
+    Entscheidung treffen.
+</p>
+{% endif %}
+<p>
+    Die nächste Seite dient dazu, Sie mit dem Format vertraut zu machen, Sie
+    werden noch keine Auswahl von Suchergebnissen durchführen.
+</p>
+
+
+<!-- ------------------- Next-Button und Bottom-Line ---------------- -->
+
+<br>
+<button class="otree-btn-next btn btn-primary">Weiter</button>
+
+<hr>
+<p> <a href="mailto: lob@stud.uni-heidelberg.de" target="_blank">Aaron Lob</a>, Universität Heidelberg  - 2020</p>
+
+{% endblock %}
